@@ -1,4 +1,4 @@
-Electron Config Env
+Electron Config Env [![Build Status](https://travis-ci.org/1amGr00t/electron-config-env.svg?branch=master)](https://travis-ci.org/1amGr00t/electron-config-env)
 =========
 
 Can be used inside an [Electron](https://electron.atom.io) app to have seperate stage environment configurations. One for development and one for packaged apps in production use.
