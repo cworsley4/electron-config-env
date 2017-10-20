@@ -6,29 +6,37 @@ cd electron-config-env
 npm install
 ```
 
-Edit stuff and run _npm test_.
+Edit stuff, run _npm test_, do git commit and push if all tests passed:
+
+```bash
+npm test
+git commit -am '<message>'
+git push
+```
 
 # Publish a new version
 
-Edit _package.json_ [version number](http://semver.org). Then git tag and npm publish from shell:
+Create a new [version](http://semver.org) of the npm module. You can do that with the _npm version_ command, which will change the version number in
+ package.json and tag it with the new release version number.
 
 ```bash
-npm login
 npm version <update_type> -m "<message>"
 ```
 
-where <update_type> is one of the [semantic versioning](http://semver.org) release types: patch, minor, or major.
+The _<update_type>_ is one of the following:
+* patch 
+* minor
+* major.
 
 _Example:_
 ```bash
-npm version patch -m "Version %s - did some stuff"
+npm version patch -m "version %s - did some stuff"
 ```
-%s = the new version number.
+_%s_ is the new version number.
 
-This command will bump the version number in package.json, add a new commit, and tag it with this release number.
-
-Last step is push to git and publish the new version to npm. 
+Now push to git and publish the new version to npm. 
 ```bash
 git push --tags
+npm login
 npm publish
 ```
