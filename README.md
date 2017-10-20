@@ -1,4 +1,6 @@
-Electron Config Env [![Build Status](https://travis-ci.org/1amGr00t/electron-config-env.svg?branch=master)](https://travis-ci.org/1amGr00t/electron-config-env)
+[![Build Status](https://travis-ci.org/1amGr00t/electron-config-env.svg?branch=master)](https://travis-ci.org/1amGr00t/electron-config-env) [![Coverage Status](https://coveralls.io/repos/github/1amGr00t/electron-config-env/badge.svg?branch=master)](https://coveralls.io/github/1amGr00t/electron-config-env?branch=master)
+
+Electron Config Env
 =========
 
 Can be used inside an [Electron](https://electron.atom.io) app to have seperate stage environment configurations. One for development and one for packaged apps in production use.
