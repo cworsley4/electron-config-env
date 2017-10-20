@@ -31,12 +31,3 @@ describe('read *.env files (key/value)', () => {
 		fs.unlink(prodEnvFile);
 	});
 });
-
-/*
-describe('read prod.env config', () => {
-	it('should read a key/value from dev stage config', () => {
-		const conf = config();
-		expect(conf.test).to.equal('this is a production configuration value');
-	});
-});
-*/
