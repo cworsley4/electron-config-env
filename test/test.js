@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
 const path = require("path");
 const chai = require("chai");
-const config = require("../index");
+const connfig = require("../index");
 const expect = chai.expect;
 const devEnvFile = path.join(process.cwd(), 'dev.env');
 const devTestString = 'this is a dev config value';
