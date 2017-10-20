@@ -1,6 +1,6 @@
 {
   "name": "electron-config-env",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "dependencies": {
     "dotenv": "^4.0.0",
     "electron": "^1.7.9"
