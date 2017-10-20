@@ -1,0 +1,32 @@
+{
+  "name": "electron-config-env",
+  "version": "0.3.3",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "electron": "^1.7.9"
+  },
+  "description": "A node module for Electron to use different staging environment configuration files. Either development stage or production stage within a packaged app.",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha --reporter nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1amGr00t/electron-config-env.git"
+  },
+  "keywords": [
+    "electron",
+    "config",
+    "environment"
+  ],
+  "author": "Stephan Haupt <hauptstephan@gmail.com> (https://github.com/1amGr00t)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1amGr00t/electron-config-env/issues"
+  },
+  "homepage": "https://github.com/1amGr00t/electron-config-env#readme"
+}
