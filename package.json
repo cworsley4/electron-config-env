@@ -5,7 +5,7 @@
     "dotenv": "^4.0.0",
     "electron": "^1.7.9"
   },
-  "description": "A node module for Electron to use different staging environment configuration files. Either development stage or production stage within a packaged app.",
+  "description": "A node module for Electron to use different staging environment configurations. Either development stage or production stage within a packaged app.",
   "main": "index.js",
   "devDependencies": {
     "chai": "^4.1.2",
