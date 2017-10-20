@@ -1,7 +1,7 @@
 Electron Config Env
 =========
 
-Can be used inside an [Electron](https://electron.atom.io) app to use have seperate stage environment configurations. One for development and one for packaged apps in production use.
+Can be used inside an [Electron](https://electron.atom.io) app to have seperate stage environment configurations. One for development and one for packaged apps in production use.
 
 The configuration values are simple key/value pairs within .env files you specify inside your project root folder.
 

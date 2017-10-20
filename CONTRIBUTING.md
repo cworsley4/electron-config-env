@@ -13,7 +13,9 @@ Edit stuff and run _npm test_.
 Edit _package.json_ [version number](http://semver.org). Then git tag and npm publish from shell:
 
 ```bash
-git tag v0.1.0
+git add .
+git commit -m 'commit message'
+git tag vx.y.z
 git push origin master --tags
 
 npm login
