@@ -1,13 +1,34 @@
 language: node_js
 
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+before_install:
+  - nvm install $NODE
+  
+branches:
+  only:
+  - master
+
+script:
+  - npm rm tslint
+  - npm install $TYPESCRIPT --force
+  - npm run test
+  - npm run cover
+
+env:
+  - NODE=8 TYPESCRIPT=typescript@1.6
+  - NODE=8 TYPESCRIPT=typescript@1.7
+  - NODE=8 TYPESCRIPT=typescript@1.8
+  - NODE=8 TYPESCRIPT=typescript@2.0
+  - NODE=8 TYPESCRIPT=typescript@2.1
+  - NODE=4 TYPESCRIPT=typescript@latest
+  - NODE=8 TYPESCRIPT=typescript@latest
+  - NODE=8 TYPESCRIPT=typescript@next
+
 node_js:
   - stable
 
-install:
-  - npm install
-
-script:
-  - npm run cover
-
-# Send coverage data to Coveralls
-after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
+after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
