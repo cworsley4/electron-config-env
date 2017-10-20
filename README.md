@@ -7,7 +7,9 @@ The configuration values are simple key/value pairs within .env files you specif
 
 ## Installation
 
-    `npm install @1amgr00t/electron-config-env`
+```bash
+npm install @1amgr00t/electron-config-env
+```
 
 ## Usage
 
@@ -17,7 +19,7 @@ There needs to be two .env files in your project root folder:
 
 These two files should hold key/value pairs of stage specific configuration values you need. In fact, dev.env is optional, because the module will look for a prod.env file if the first is absent.
 
-Example:
+_Example:_
 
 dev.env:
 ```bash
@@ -38,8 +40,10 @@ let myVar1 = config.myVar1;
 let myVar2 = config.myVar2;
 ```
 
-__Important__: Your need to ship your app with only the prod.env, otherwise dev.env will be used in your packaged app. You can do this by either simple delete dev.env or even better by ignore this file within your packager config or build script. [Electron Packager](https://github.com/electron-userland/electron-packager) for example has an --ignore option.
+__Important__: Your need to ship your app with only the prod.env, otherwise dev.env will be used in your packaged app. You can do this by either simple delete dev.env or even better by ignore this file within your packager config or build script. [Electron Packager](https://github.com/electron-userland/electron-packager) for example has an '--ignore' option.
 
 ## Tests
 
-    `npm test`
+```bash
+npm test
+```

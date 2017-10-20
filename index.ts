@@ -10,11 +10,11 @@ let configInstance = null;
  */
 function createConfig() {
 
-	let configFile = path.join(__dirname, '../dev.env');
+	let configFile = path.join(process.cwd(), 'dev.env');
 
 	// the dev.env file will not be packaged with the app. So there will only be a prod.env file in production.
 	if (!fs.existsSync(configFile)) {
-		configFile = path.join(__dirname, '../prod.env');
+		configFile = path.join(process.cwd(), 'prod.env');
 		if (!fs.existsSync(configFile)) {
 			throw new Error('No "prod.env" file found inside project root.');
 		}
