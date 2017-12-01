@@ -37,10 +37,9 @@ myVar2='another dev prod var'
 
 Access your config values from anywhere, the module will deliver a single instance throughout the app:
 ```bash
-const config = require('@1amgr00t/electron-config-env');
-const myConf = config();
-let myVar1 = myConf.myVar1; 
-let myVar2 = myConf.myVar2;
+require('@1amgr00t/electron-config-env');
+let myVar1 = config.myVar1; 
+let myVar2 = config.myVar2;
 ```
 
 __Important__: Your need to ship your app with only the prod.env, otherwise dev.env will be used in your packaged app. You can do this by either simple delete dev.env or even better by ignore this file within your packager config or build script. [Electron Packager](https://github.com/electron-userland/electron-packager) for example has an '--ignore' option.
