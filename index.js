@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("path");
 const fs = require("fs");
 const dotenv = require("dotenv");
+const finder = require("fs-finder");
 class Config {
     constructor() {
         this.config = null;
-        let configFile = path.join(process.cwd(), 'dev.env');
+        let configFile = finder.from(process.cwd()).findFiles('dev.env')[0];
         if (!fs.existsSync(configFile)) {
-            configFile = path.join(process.cwd(), 'prod.env');
+            configFile = finder.from(process.cwd()).findFiles('prod.env')[0];
             if (!fs.existsSync(configFile)) {
-                throw new Error('No "prod.env" file found inside project root.');
+                throw new Error('No "prod.env" file found inside project.');
             }
         }
         this.config = dotenv.parse(fs.readFileSync(configFile));

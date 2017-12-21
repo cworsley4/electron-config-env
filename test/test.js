@@ -8,7 +8,7 @@ const expect = chai.expect;
 const devEnvFile = path.join(process.cwd(), 'dev.env');
 const devTestString = 'this is a dev config value';
 const prodEnvFile = path.join(process.cwd(), 'prod.env');
-const prodTestString = 'this is a dev config value';
+const prodTestString = 'this is a prod config value';
 describe('read *.env files (key/value)', () => {
     it('no prod.env => read dev.env', () => {
         fs.writeFileSync(devEnvFile, 'test="' + devTestString + '"');

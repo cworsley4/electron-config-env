@@ -1,6 +1,6 @@
-import * as path from 'path';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
+import * as finder from 'fs-finder';
 
 export class Config {
 
@@ -18,13 +18,13 @@ export class Config {
 	 */
 	private constructor() {
 
-		let configFile = path.join(process.cwd(), 'dev.env');
+		let configFile = finder.from(process.cwd()).findFiles('dev.env')[0];
 
 		// the dev.env file will not be packaged with the app. So there will only be a prod.env file in production.
 		if (!fs.existsSync(configFile)) {
-			configFile = path.join(process.cwd(), 'prod.env');
+			configFile = finder.from(process.cwd()).findFiles('prod.env')[0];
 			if (!fs.existsSync(configFile)) {
-				throw new Error('No "prod.env" file found inside project root.');
+				throw new Error('No "prod.env" file found inside project.');
 			}
 		}
 
