@@ -7,7 +7,7 @@ class Config {
     constructor() {
         this.config = null;
         let configFile = finder.from(process.cwd()).findFiles('dev.env')[0];
-        if (!fs.existsSync(configFile)) {
+        if (!fs.existsSync(configFile) || process.env.NODE_ENV === 'production') {
             configFile = finder.from(process.cwd()).findFiles('prod.env')[0];
             if (!fs.existsSync(configFile)) {
                 throw new Error('No "prod.env" file found inside project.');
