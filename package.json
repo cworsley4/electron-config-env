@@ -3,7 +3,6 @@
   "version": "1.4.1",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "electron": "^1.7.9",
     "fs-finder": "^1.8.1"
   },
   "description": "A node module for Electron to use different staging environment configurations. Either development stage or production stage within a packaged app.",
